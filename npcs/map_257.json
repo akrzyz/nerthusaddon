@@ -52,6 +52,7 @@
     "y" : "33",
     "url" : "https://www.margonem.pl/obrazki/npc/kob/doryda.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
        "0" :
@@ -198,6 +199,7 @@
     "y" : "28",
     "url" : "http://emargo.pl/margonem/obrazki/npc/kob/jadwiga.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -261,6 +263,7 @@
     "y" : "28",
     "url" : "http://margonem.pl/obrazki/npc/bur/npc232.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -346,6 +349,7 @@
     "y" : "27",
     "url" : "http://emargo.pl/margonem/obrazki/npc/obj/stoss.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -484,6 +488,7 @@
     "x" : "55",
     "y" : "30",
     "url" : "http://emargo.pl/margonem/obrazki/itemy/kon/ark-lamp-zlo.gif",
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -498,6 +503,7 @@
     "x" : "69",
     "y" : "46",
     "url" : "http://emargo.pl/margonem/obrazki/itemy/kon/ark-lamp-zlo.gif",
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -513,6 +519,7 @@
     "x" : "71",
     "y" : "34",
     "url" : "http://emargo.pl/margonem/obrazki/itemy/kon/ark-lamp-zlo.gif",
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -528,6 +535,7 @@
     "y" : "33",
     "url" : "#img/npc/table1.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -543,6 +551,7 @@
     "y" : "39",
     "url" : "#img/npc/table3.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -558,6 +567,7 @@
     "y" : "53",
     "url" : "#img/npc/table2.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -573,6 +583,7 @@
     "y" : "32",
     "url" : "http://emargo.pl/margonem/obrazki/npc/kob/cyganka3.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -614,6 +625,7 @@
         [
             "O, #NAME. Też chcesz spróbować nalewki z Hironii?",
             "Jesteś Hirończykiem? ->1",
+            "Nie wróciłeś z Dalassą? ->15",
             "Wolę nie, jeszcze się czymś zarażę. ->END"
         ],
         "1" :
@@ -697,6 +709,17 @@
         [
             "No, skończmy temat. Twoje zdrowie! Za podróże i przygody!",
             "Za przygody! ->END"
+        ],
+         "15" :
+        [
+            "Mam tu jeszcze kilka rzeczy do zrobienia. Umówiliśmy się, że za dwa tygodnie wyruszę do Werbin i tam na mnie zaczeka.",
+            "Ah, rozumiem. A co to za rzeczy? ->16",
+            "Mhm, taka sytuacja. ->END
+        ],
+         "16" :
+        [
+            "Muszę porozmawiać z paroma osobami, a dotąd nie miałem większej okazji. Wybacz, ale muszę iść.",
+            "Rozumiem. Do zobaczenia! ->END"
         ]
     }
 },
@@ -706,6 +729,7 @@
     "y" : "35",
     "url" : "#img/npc/para1.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
@@ -721,6 +745,7 @@
     "y" : "34",
     "url" : "#img/npc/para2.gif",
     "collision" : true,
+    "date" : "21.9-30.9",
     "dialog" :
     {
         "0" :
