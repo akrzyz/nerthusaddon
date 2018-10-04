@@ -390,6 +390,7 @@
     "x" : "48",
     "y" : "25",
     "url" : "http://emargo.pl/margonem/obrazki/npc/obj/pochodnia-haw04.gif",
+    "time" : "20-6",
     "dialog" :
     {
         "0" :
@@ -404,6 +405,7 @@
     "x" : "68",
     "y" : "43",
     "url" : "http://emargo.pl/margonem/obrazki/npc/obj/pochodnia-haw04.gif",
+    "time" : "20-6",
     "dialog" :
     {
         "0" :
@@ -418,6 +420,7 @@
     "x" : "59",
     "y" : "36",
     "url" : "http://emargo.pl/margonem/obrazki/npc/obj/pochodnia-haw04.gif",
+    "time" : "20-6",
     "dialog" :
     {
         "0" :
@@ -446,6 +449,7 @@
     "x" : "70",
     "y" : "37",
     "url" : "http://emargo.pl/margonem/obrazki/npc/obj/pochodnia-haw03.gif",
+    "time" : "20-6",
     "dialog" :
     {
         "0" :
@@ -460,6 +464,7 @@
     "x" : "50",
     "y" : "40",
     "url" : "http://emargo.pl/margonem/obrazki/npc/obj/pochodnia-haw03.gif",
+    "time" : "20-6",
     "dialog" :
     {
         "0" :
@@ -474,6 +479,7 @@
     "x" : "40",
     "y" : "24",
     "url" : "http://emargo.pl/margonem/obrazki/npc/obj/pochodnia-haw03.gif",
+    "time" : "20-6",
     "dialog" :
     {
         "0" :
