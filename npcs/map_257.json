@@ -253,8 +253,8 @@
         [
             "[ Zawartość siatek kobiety opróżnia się proporcjonalnie do zawartości twojej sakiewki. Odchodzisz spoglądając ze łzą w oku na handlarkę. Zza pleców słyszysz nagle głośne 'Ale go urob-...' co jednak zagłusza gwar harców przy jesiennym ognisku. Pora dołączyć do zabawy! ]",
             "Chyba się przesłyszałem. ->END"
-            ]
-      }
+        ]
+    }
 },
 {
 
@@ -501,7 +501,7 @@
         [
             "[ Lampion lekko kołysze się na wietrze. ]",
             "Koniec. ->END"
-            ]
+        ]
     }
 },
 {
@@ -516,8 +516,7 @@
         [
             "[ Lampion lekko kołysze się na wietrze. ]",
             "Koniec. ->END"
-            ]
-
+        ]
     }
 },
 {
@@ -532,7 +531,7 @@
         [
             "[ Lampion lekko kołysze się na wietrze. ]",
             "Koniec. ->END"
-            ]
+        ]
     }
 },
 {
@@ -720,7 +719,7 @@
         [
             "Mam tu jeszcze kilka rzeczy do zrobienia. Umówiliśmy się, że za dwa tygodnie wyruszę do Werbin i tam na mnie zaczeka.",
             "Ah, rozumiem. A co to za rzeczy? ->16",
-            "Mhm, taka sytuacja. ->END
+            "Mhm, taka sytuacja. ->END"
         ],
          "16" :
         [
@@ -757,7 +756,7 @@
         "0" :
         [
             "[ Tańczący ludzie nie wydają się zbyt zadowoleni. Wymieniają co chwilę między sobą jakieś, wydaje się że niezbyt przyjemne, uwagi. Mężczyzna nadepnął kobiecie na stopę co ona skwitowała głośnym prychnięciem. ]",
-           "Nie chcę się mieszać w małżeńskie kłótnie. ->END"
+            "Nie chcę się mieszać w małżeńskie kłótnie. ->END"
         ]
     }
 }
