@@ -1,53 +1,51 @@
 [
 {
-    "name" : "Kicia",
-    "x" : "37",
-    "y" : "52",
-    "url" : "http://game1.margonem.pl/obrazki/itemy/eve/ka-kotek.gif",
+    "name" : "Drzewo totemów",
+    "x" : "5",
+    "y" : "27",
+    "url" : "https://www.margonem.pl/obrazki/npc/map/tri-drzew-tot3.gif",
     "dialog" :
     {
         "0" :
         [
-            "Miau miau miau",
-            "o jaka fajna kicia, pogłaszcze cię ->1",
-            "skąd się tu kiciu wzięłaś? ->2",
-            "lepiej nie podchodzić.. ->END"
+            "[ Wiedźmie drzewo... Z całą pewnością nie było dziełem zwykłych magów. Unosząca się dookoła niepokojąca energia przenika do szpiku kości. Powiewające na wietrze kości grzechoczą stukając o siebie. ]",
+            "Jak... Jak ktoś mógł to zrobić? ->1",
+            "[ W milczeniu sięgasz do jednego z zawieszonych przedmiotów. ] ->2",
+            "Lepiej nie podchodzić... ->END"
         ],
         "1" :
         [
-            "Mrrr",
-            "dobry kociak ->END"
+            "[ Nikt nie odpowiedział. Za to pojawiło się wrażenie bycia obserwowanym. ]",
+            "Lepiej stąd iść zanim to ja zawisnę na jednej z gałęzi. ->END"
         ],
         "2" :
         [
-            "Witaj #NAME jestem <a href='https://www.margonem.pl/?task=forum&show=posts&id=264553&ps=5#post41810772' target='_blank'>testową kicią</a>",
-            "aaa, to ok ... ->END"
-        ]
+            "[ Mała, szmaciana laleczka patrzy na ciebie pustymi oczami z guzików. Coś ukuło cię w palec, a w głowie rozległ się cichy głos. ]",
+            "Dalej ->END"
+        ],
+        "3" :
+        [
+            "Trzynaście... Trzynaście ich było...",
+            "Kogo było trzynaście? ->4"
+        ],
+        "4" :
+        [
+            "[ Coś w tutejszej atmosferze się zmieniło. Nie wiadomo dokładnie co, ale lepiej się stąd wynosić. ]",
+            "Koniec. ->END"
+        ],
     }
 },
 {
-    "name" : "Kicia",
-    "x" : "37",
-    "y" : "52",
-    "url" : "http://game1.margonem.pl/obrazki/itemy/eve/ka-kotek.gif",
+    "name" : "Zaburzona aura",
+    "x" : "11",
+    "y" : "30",
+    "url" : "https://margonem.pl/obrazki/npc/obj/magic_dust1.gif",
     "dialog" :
     {
         "0" :
         [
-            "Miau miau miau",
-            "o jaka fajna kicia, pogłaszcze cię ->1",
-            "skąd się tu kiciu wzięłaś? ->2",
-            "lepiej nie podchodzić.. ->END"
-        ],
-        "1" :
-        [
-            "Mrrr",
-            "dobry kociak ->END"
-        ],
-        "2" :
-        [
-            "Witaj #NAME jestem <a href='https://www.margonem.pl/?task=forum&show=posts&id=264553&ps=5#post41810772' target='_blank'>testową kicią</a>",
-            "aaa, to ok ... ->END"
+            "[ Kiedyś musiało się tu wydarzyć coś bardzo złego, bo aura magiczna wydaje się spaczona. Przyglądając się uważnie widać, że rośliny w tym miejscu są inne, zmarniałe i pokryte dziwnym, szarawym nalotem przypominającym szron. Aura promieniuje na całe Wrzosowiska czyniąc je miejscem nieprzyjaznym dla ludzi, ale wręcz idealnym do mrocznych rytuałów czy praktyk. ]",
+            "Koniec ->END"
         ]
     }
 },
