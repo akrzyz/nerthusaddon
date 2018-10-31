@@ -5,16 +5,62 @@
 try{
 
 //Lista osób specjalnych - uprawnieni do używania specjalnych komend na chacie - taki bard bez etykietki
-nerthus.NerthusSpec = ["Leira Elamshin","Sihaya","Lechi Chucherko","Ath`Lar Draa`Ilythiiri","Ihoold","Aktibro","Shiraya","Minstrella","Noys Hollyhook-Rumore","Mateusz z Rocevaux"]
+nerthus.NerthusSpec = [
+    "Leira Elamshin",
+    "Sihaya",
+    "Lechi Chucherko",
+    "Ath`Lar Draa`Ilythiiri",
+    "Ihoold",
+    "Aktibro",
+    "Shiraya",
+    "Minstrella",
+    "Noys Hollyhook-Rumore",
+    "Mateusz z Rocevaux",
+    "Korano Ligatur"
+]
 
 //lista radnych - możliwość używania komend chatowych i ranga "radny"
 nerthus.NerthusRad = ['Umbrael Regis','Rothe']
 
 //Lista narratorów - możliwość używania *nar i ranga "bard" + 'Umbrael Regis',
-nerthus.NerthusNarr = ['Friedrich von Rommel','Laliemm','Kostryn']
+nerthus.NerthusNarr = ['Friedrich von Rommel','Laliemm','Kostryn','Materios Dragonius']
 
 //Nazwy rang tych zamiast lvla
-nerthus.lvlNames = ['Ciułacz','Łowca Wilków','Tropiciel Zulusów','Poganiacz Goblinów','Piętno Orków','Miłośnik Harpii','Rezun Olbrzymów','Hycel Gnolli','Koszmar Tolloków','Magazynier Pełną Gębą','Zguba Minotaurów','Niszczyciel Szkieletów','Treser Centaurów','Nieustraszony Pogromca Korsarzy','Tańczący z Mumiami','Szabrownik Wraków','Gobliński Kat','Postrach Berserkerów','Władca Kazamatów','Młot na Czarownice','Dręczyciel Praorków','Zguba Czarnej Gwardii','Poskramiacz Furboli','Egzekutor Myświórów','Wielki Inkwizytor','Zaklinacz Arachnidów','Kat Demonisa','Oprawca Maddoków','Potomek Najwyższych','Piekielny Jeźdźca', 'Ponury Żniwiarz','Gwardzista Piekieł','Tytan']
+nerthus.lvlNames = [
+    'Ciułacz',
+    'Łowca Wilków',
+    'Tropiciel Zulusów',
+    'Poganiacz Goblinów',
+    'Piętno Orków',
+    'Miłośnik Harpii',
+    'Rezun Olbrzymów',
+    'Hycel Gnolli',
+    'Koszmar Tolloków',
+    'Magazynier Pełną Gębą',
+    'Zguba Minotaurów',
+    'Niszczyciel Szkieletów',
+    'Treser Centaurów',
+    'Nieustraszony Pogromca Korsarzy',
+    'Tańczący z Mumiami',
+    'Szabrownik Wraków',
+    'Gobliński Kat',
+    'Postrach Berserkerów',
+    'Władca Kazamatów',
+    'Młot na Czarownice',
+    'Dręczyciel Praorków',
+    'Zguba Czarnej Gwardii',
+    'Poskramiacz Furboli',
+    'Egzekutor Myświórów',
+    'Wielki Inkwizytor',
+    'Zaklinacz Arachnidów',
+    'Kat Demonisa',
+    'Oprawca Maddoków',
+    'Potomek Najwyższych',
+    'Piekielny Jeźdźca',
+    'Ponury Żniwiarz',
+    'Gwardzista Piekieł',
+    'Tytan'
+]
 
 //vips {player_id : title}
 nerthus.vips = {
@@ -43,7 +89,8 @@ nerthus.vips = {
 15098 : 'Siostra Płomieni',
 13438 : 'Zakuty łeb',
 16089 : 'Chochlica-ponczlica',
-16372 : 'Chluba Lolth'
+16372 : 'Chluba Lolth',
+10523 : 'Lux Aeterna'
 }
 
 //Info jakie się wyświetla po załadowaniu gry - to czerwone, jeżeli jest '' to nie wyświetla się nic
