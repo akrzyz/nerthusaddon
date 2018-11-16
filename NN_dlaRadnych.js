@@ -128,7 +128,7 @@ nerthus.graf['panelTop']= 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/
 nerthus.graf['dazed']   = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/dazed.png'
 nerthus.graf['loading'] = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/loadingnerthus.png'
 nerthus.graf['chat']    = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/chatPanel2.png'
-nerthus.graf['zodiac']  = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/zodiacIcons.gif';
+nerthus.graf['zodiac']  = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/zodiacIcons.gif'
 
 
 nerthus.ranks = {}

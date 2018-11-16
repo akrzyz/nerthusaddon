@@ -84,13 +84,13 @@ nerthus.zodiac.run = function ()
             $("#nZodiacDesc").fadeIn(500).html(this.descriptions[this.id][0])
         }.bind(this))
         .mouseleave(function () {
-            $("#nZodiacDesc").fadeOut(500);
+            $("#nZodiacDesc").fadeOut(500)
         })
         .click(function () {
             if ($("#nZodiacDesc").html() === nerthus.zodiac.descriptions[nerthus.weather.id][0])
-                $("#nZodiacDesc").fadeIn(500).html(nerthus.zodiac.descriptions[nerthus.weather.id][1]);
+                $("#nZodiacDesc").fadeIn(500).html(nerthus.zodiac.descriptions[nerthus.weather.id][1])
             else
-                $("#nZodiacDesc").fadeIn(500).html(nerthus.zodiac.descriptions[nerthus.weather.id][0]);
+                $("#nZodiacDesc").fadeIn(500).html(nerthus.zodiac.descriptions[nerthus.weather.id][0])
         });
     //pole opisowe zodiaku
     $('<div id="nZodiacDesc" style="z-Index:300; width: 410px; opacity: 0.8; position: absolute; top: 60px; left: 60px; font: bold 14px Georgia; color:#F0F8FF"></div>').appendTo('#centerbox2');
