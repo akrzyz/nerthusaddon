@@ -10,8 +10,8 @@ before(function()
     VERSION_CURRENT = "CURRENT_VERSION"
     VERSION_OLD = "OLD_VERSION"
     VERSION_MASTER = "master"
-    PREFIX_CDN = 'http://cdn.rawgit.com/akrzyz/nerthusaddon'
-    PREFIX_MASTER = 'http://rawgit.com/akrzyz/nerthusaddon'
+    PREFIX_CDN = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
+    PREFIX_MASTER = 'https://raw.githubusercontent.com/akrzyz/nerthusaddon'
     ADDITIONAL_SCRIPTS = ["ADDITIONAL_SCRIPT_1.js", "ADDITIONAL_SCRIPT_2.js"]
 
 })
@@ -39,15 +39,13 @@ beforeEach(function()
     nerthus.addon.filesPrefix = PREFIX_CDN
 })
 
-test("fileUrl concat filesPrefix, version and file_name into url", function()
+test("fileUrl concat filesPrefix and file_name into url", function()
 {
     var FILE = 'SCRIPT.JS'
     var PREFIX = 'PREFIX'
-    var VERSION = 'VERSION'
-    var FILE_URL = 'PREFIX/VERSION/SCRIPT.JS'
+    var FILE_URL = 'PREFIX/SCRIPT.JS'
 
     nerthus.addon.filesPrefix = PREFIX
-    nerthus.addon.version = VERSION
     expect(nerthus.addon.fileUrl(FILE)).to.be.equal(FILE_URL)
 })
 
