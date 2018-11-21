@@ -5,54 +5,40 @@ try
 nerthus.zodiac = {}
 nerthus.zodiac.id = 12
 
-nerthus.zodiac.signs = [
-    "",
-    "Wodnik",
-    "Ryby",
-    "Baran",
-    "Byk",
-    "Bliźnięta",
-    "Rak",
-    "Lew",
-    "Panna",
-    "Waga",
-    "Skorpion",
-    "Strzelec",
-    "Koziorożec"
-]
-
 nerthus.zodiac.calculate = function()
 {
     let makeStartDate = function(day,month)
     {
         let date = new Date()
-        date.setUTCDate(day)
-        date.setUTCMonth(month - 1)
+        date.setUTCMonth(month - 1, day)
+        date.setUTCHours(0, 0, 0)
         return date
     }
     const date = new Date()
     const SIGNS =
         [
             makeStartDate(20, 1), // Wodnik
-            makeStartDate(18, 2), // Ryby
-            makeStartDate(20, 3), // Baran
+            makeStartDate(19, 2), // Ryby
+            makeStartDate(21, 3), // Baran
             makeStartDate(20, 4), // Byk
-            makeStartDate(21, 5), // Bliźnięta
-            makeStartDate(21, 6), // Rak
-            makeStartDate(22, 7), // Lew
-            makeStartDate(23, 8), // Panna
+            makeStartDate(23, 5), // Bliźnięta
+            makeStartDate(22, 6), // Rak
+            makeStartDate(23, 7), // Lew
+            makeStartDate(24, 8), // Panna
             makeStartDate(23, 9), // Waga
             makeStartDate(23, 10),// Skorpion
             makeStartDate(22, 11),// Strzelec
-            makeStartDate(21, 12) // Koziorożec
+            makeStartDate(22, 12) // Koziorożec
         ]
-    let currentSign = 12
-    SIGNS.forEach(function(SIGN, i) {
-        if(date >= SIGN)
-            currentSign = (i + 1) //element index + 1
+    let currentSign= SIGNS.findIndex(function(SIGN) {
+        return SIGN >= date
     })
-    return currentSign
+    if (currentSign === -1 || currentSign === 0)
+        return 12
+    else
+        return currentSign
 }
+
 
 nerthus.zodiac.set_zodiac = function (id)
 {
