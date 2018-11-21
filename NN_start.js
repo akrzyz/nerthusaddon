@@ -9,10 +9,10 @@ try{
 nerthus = {}
 nerthus.addon = {}
 nerthus.addon.consts = {}
-nerthus.addon.consts.MASERT = "master"
-nerthus.addon.consts.RAW_PREFIX = 'http://rawgit.com/akrzyz/nerthusaddon'
-nerthus.addon.consts.CDN_PREFIX = 'http://cdn.rawgit.com/akrzyz/nerthusaddon'
-nerthus.addon.version = nerthus.addon.consts.MASERT
+nerthus.addon.consts.MASTER = "master"
+nerthus.addon.consts.RAW_PREFIX = 'https://raw.githubusercontent.com/akrzyz/nerthusaddon'
+nerthus.addon.consts.CDN_PREFIX = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
+nerthus.addon.version = nerthus.addon.consts.MASTER
 nerthus.addon.filesPrefix = nerthus.addon.consts.CDN_PREFIX
 nerthus.addon.fileUrl = function(filename)
 {
@@ -48,7 +48,7 @@ NerthusAddonUtils = (function()
         if(this.storage() && this.storage().NerthusAddonDebug)
         {
             nerthus.addon.filesPrefix = nerthus.addon.consts.RAW_PREFIX
-            nerthus.addon.version = nerthus.addon.consts.MASERT
+            nerthus.addon.version = nerthus.addon.consts.MASTER
             this.loadFromGitHub()
         }
         else if(this.storage() && this.storage().nerthus)

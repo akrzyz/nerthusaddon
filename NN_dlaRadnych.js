@@ -119,14 +119,14 @@ nerthus.scripts =
 ]
 
 nerthus.graf = {}
-nerthus.graf['weather'] = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/weatherIcons.gif'
-nerthus.graf['rain']    = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/weather_rain.gif'
-nerthus.graf['snow']    = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/weather_snow.jpg'
-nerthus.graf['shield']  = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/nerthus_icon.gif'
-nerthus.graf['panelTop']= 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/nerthusPanel.png'
-nerthus.graf['dazed']   = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/dazed.png'
-nerthus.graf['loading'] = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/loadingnerthus.png'
-nerthus.graf['chat']    = 'http://cdn.rawgit.com/akrzyz/nerthusaddon/master/img/chatPanel2.png'
+nerthus.graf['weather'] = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/weatherIcons.gif'
+nerthus.graf['rain']    = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/weather_rain.gif'
+nerthus.graf['snow']    = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/weather_snow.jpg'
+nerthus.graf['shield']  = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/nerthus_icon.gif'
+nerthus.graf['panelTop']= 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/nerthusPanel.png'
+nerthus.graf['dazed']   = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/dazed.png'
+nerthus.graf['loading'] = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/loadingnerthus.png'
+nerthus.graf['chat']    = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/chatPanel2.png'
 
 nerthus.ranks = {}
 nerthus.ranks.start = function()
