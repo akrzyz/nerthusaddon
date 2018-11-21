@@ -3,7 +3,25 @@ try
 {
 
 nerthus.zodiac = {}
-nerthus.zodiac.calculate = function ()
+nerthus.zodiac.id = 12
+
+nerthus.zodiac.signs = [
+    "",
+    "Wodnik",
+    "Ryby",
+    "Baran",
+    "Byk",
+    "Bliźnięta",
+    "Rak",
+    "Lew",
+    "Panna",
+    "Waga",
+    "Skorpion",
+    "Strzelec",
+    "Koziorożec"
+]
+
+nerthus.zodiac.calculate = function()
 {
     let makeStartDate = function(day,month)
     {
@@ -76,12 +94,10 @@ nerthus.zodiac.run = function ()
 
 nerthus.zodiac.start_change_timer = function ()
 {
-    var hour = (Math.floor((new Date().getUTCHours()) / 4) + 1) * 24
-    var date = new Date()
-    date.setUTCHours(hour)
-    date.setUTCMinutes(0)
-    date.setUTCSeconds(0)
-    var interval = date - new Date()
+    let hour = (Math.floor((new Date().getUTCHours()) / 4) + 1) * 24
+    let date = new Date()
+    date.setUTCHours(hour, 0, 0)
+    let interval = date - new Date()
     this.change_timer = setTimeout(this.set_global_zodiac.bind(this), interval)
 }
 

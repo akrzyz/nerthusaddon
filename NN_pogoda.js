@@ -43,9 +43,7 @@ nerthus.weather.start_change_timer = function()
 {
     var hour = (Math.floor((new Date().getUTCHours())/4) + 1) * 4
     var date = new Date()
-    date.setUTCHours(hour)
-    date.setUTCMinutes(0)
-    date.setUTCSeconds(0)
+    date.setUTCHours(hour, 0, 0)
     var interval = date - new Date()
     this.change_timer = setTimeout(this.set_global_weather.bind(this),  interval)
 }
