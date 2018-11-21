@@ -116,7 +116,8 @@ nerthus.scripts =
     'NN_maps.js',
     'NN_night.js',
     'NN_pogoda.js',
-    'NN_npc.js'
+    'NN_npc.js',
+    'NN_zodiak.js'
 ]
 
 nerthus.graf = {}
