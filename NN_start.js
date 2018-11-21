@@ -16,7 +16,8 @@ nerthus.addon.version = nerthus.addon.consts.MASTER
 nerthus.addon.filesPrefix = nerthus.addon.consts.CDN_PREFIX
 nerthus.addon.fileUrl = function(filename)
 {
-    return [this.filesPrefix, filename].join('/')
+    let url = [this.filesPrefix, this.version].join('@')
+    return [url, filename].join('/')
 }
 nerthus.addon.store = function()
 {

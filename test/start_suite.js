@@ -43,9 +43,11 @@ test("fileUrl concat filesPrefix and file_name into url", function()
 {
     var FILE = 'SCRIPT.JS'
     var PREFIX = 'PREFIX'
-    var FILE_URL = 'PREFIX/SCRIPT.JS'
+    var VERSION = 'VERSION'
+    var FILE_URL = 'PREFIX@VERSION/SCRIPT.JS'
 
     nerthus.addon.filesPrefix = PREFIX
+    nerthus.addon.version = VERSION
     expect(nerthus.addon.fileUrl(FILE)).to.be.equal(FILE_URL)
 })
 
