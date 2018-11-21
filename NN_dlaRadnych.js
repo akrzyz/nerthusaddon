@@ -119,14 +119,14 @@ nerthus.scripts =
 ]
 
 nerthus.graf = {}
-nerthus.graf['weather'] = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/weatherIcons.gif'
-nerthus.graf['rain']    = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/weather_rain.gif'
-nerthus.graf['snow']    = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/weather_snow.jpg'
-nerthus.graf['shield']  = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/nerthus_icon.gif'
-nerthus.graf['panelTop']= 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/nerthusPanel.png'
-nerthus.graf['dazed']   = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/dazed.png'
-nerthus.graf['loading'] = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/loadingnerthus.png'
-nerthus.graf['chat']    = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon/img/chatPanel2.png'
+nerthus.graf['weather'] = nerthus.addon.fileUrl("img/weatherIcons.gif")
+nerthus.graf['rain']    = nerthus.addon.fileUrl("img/weather_rain.gif")
+nerthus.graf['snow']    = nerthus.addon.fileUrl("img/weather_snow.jpg")
+nerthus.graf['shield']  = nerthus.addon.fileUrl("img/nerthus_icon.gif")
+nerthus.graf['panelTop']= nerthus.addon.fileUrl("img/nerthusPanel.png")
+nerthus.graf['dazed']   = nerthus.addon.fileUrl("img/dazed.png")
+nerthus.graf['loading'] = nerthus.addon.fileUrl("img/loadingnerthus.png")
+nerthus.graf['chat']    = nerthus.addon.fileUrl("img/chatPanel2.png")
 
 nerthus.ranks = {}
 nerthus.ranks.start = function()
