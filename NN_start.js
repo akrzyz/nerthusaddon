@@ -10,14 +10,17 @@ nerthus = {}
 nerthus.addon = {}
 nerthus.addon.consts = {}
 nerthus.addon.consts.MASTER = "master"
-nerthus.addon.consts.RAW_PREFIX = 'https://raw.githubusercontent.com/akrzyz/nerthusaddon'
-nerthus.addon.consts.CDN_PREFIX = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
+nerthus.addon.consts.RAW_PREFIX = 'http://raw.githubusercontent.com/akrzyz/nerthusaddon'
+nerthus.addon.consts.RAW_VERSION_SEPARATOR = '/'
+nerthus.addon.consts.CDN_PREFIX = 'http://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
+nerthus.addon.consts.CDN_VERSION_SEPARATOR = '@'
+nerthus.addon.consts.VERSION_URL = [nerthus.addon.consts.RAW_PREFIX, "master/version.json"].join('/')
 nerthus.addon.version = nerthus.addon.consts.MASTER
+nerthus.addon.version_separator = nerthus.addon.consts.CDN_VERSION_SEPARATOR
 nerthus.addon.filesPrefix = nerthus.addon.consts.CDN_PREFIX
 nerthus.addon.fileUrl = function(filename)
 {
-    let url = [this.filesPrefix, this.version].join('@')
-    return [url, filename].join('/')
+    return [[this.filesPrefix, this.version].join(this.version_separator), filename].join('/')
 }
 nerthus.addon.store = function()
 {
@@ -49,6 +52,7 @@ NerthusAddonUtils = (function()
         if(this.storage() && this.storage().NerthusAddonDebug)
         {
             nerthus.addon.filesPrefix = nerthus.addon.consts.RAW_PREFIX
+            nerthus.addon.version_separator = nerthus.addon.consts.RAW_VERSION_SEPARATOR
             nerthus.addon.version = nerthus.addon.consts.MASTER
             this.loadFromGitHub()
         }
@@ -93,7 +97,7 @@ NerthusAddonUtils = (function()
 
     utils.loadVersion = function(onLoaded)
     {
-        const VERSION_URL = "http://raw.githubusercontent.com/akrzyz/nerthusaddon/master/version.json"
+        const VERSION_URL = nerthus.addon.consts.VERSION_URL
         $.getJSON(VERSION_URL, function(data)
         {
             nerthus.addon.version = data.version

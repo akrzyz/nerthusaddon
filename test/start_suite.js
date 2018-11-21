@@ -10,8 +10,8 @@ before(function()
     VERSION_CURRENT = "CURRENT_VERSION"
     VERSION_OLD = "OLD_VERSION"
     VERSION_MASTER = "master"
-    PREFIX_CDN = 'https://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
-    PREFIX_MASTER = 'https://raw.githubusercontent.com/akrzyz/nerthusaddon'
+    PREFIX_CDN = 'http://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
+    PREFIX_MASTER = 'http://raw.githubusercontent.com/akrzyz/nerthusaddon'
     ADDITIONAL_SCRIPTS = ["ADDITIONAL_SCRIPT_1.js", "ADDITIONAL_SCRIPT_2.js"]
 
 })
