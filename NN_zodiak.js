@@ -2,6 +2,7 @@ try
 {
 
 nerthus.zodiac = {}
+nerthus.zodiac.icon = nerthus.addon.fileUrl("img/zodiacIcon.gif")
 nerthus.zodiac.SIGNS = {
     AQUARIUS    : 0,
     PISCES      : 1,
@@ -49,7 +50,7 @@ nerthus.zodiac.calculate = function()
 nerthus.zodiac.set_zodiac = function(sign)
 {
     this.sign = parseInt(sign)
-    $('#nZodiac').css('background', 'url(' + nerthus.graf.zodiac + ') -' + this.sign * 55 + 'px -' + this.sign * 55 + 'px')
+    $('#nZodiac').css('background', 'url(' + this.icon + ') -' + this.sign * 55 + 'px -' + this.sign * 55 + 'px')
 }
 
 nerthus.zodiac.run = function ()
