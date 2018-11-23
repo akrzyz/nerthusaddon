@@ -1,3 +1,5 @@
+suite("Zodiak")
+
 before(function()
 {
     nerthus = {}
@@ -5,7 +7,7 @@ before(function()
     nerthus.options = {}
 
     expect = require("expect.js")
-    require("../NN_zodiac.js")
+    require("../NN_zodiak.js")
 })
 
 
