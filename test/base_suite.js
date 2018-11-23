@@ -168,6 +168,16 @@ test("setEnterMsg : msg present", function()
     expect(_message).to.be.equal(nerthus.EnterMsg)
 })
 
+test("only store settings", function()
+{
+    let opt = {op1:true, op2:false, op3:"Hmm"}
+    nerthus.storeSettings(opt)
+
+    expect(nerthus.options.op1).to.be.equal(opt.op1)
+    expect(nerthus.options.op2).to.be.equal(opt.op2)
+    expect(nerthus.options.op3).to.be.equal(opt.op3)
+})
+
 test("store and load settings", function()
 {
     var opt = {op1:true, op2:false, op3:"Hmm"}
