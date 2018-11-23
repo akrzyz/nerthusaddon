@@ -85,10 +85,10 @@ nerthus.loadSettings = function()
             if(loaded_options.length() === nerthus.options.length())
                 nerthus.options = loaded_options
             else
-                this.storeSettings(nerthus.options)
+                this.storeSettings(this.options)
         }
         else
-            this.storeSettings(nerthus.options)
+            this.storeSettings(this.options)
     }
     else
     {
@@ -104,7 +104,7 @@ nerthus.loadSettings = function()
                 this.options.zodiac = Boolean(parseInt(this.settings[5]))
             }
             else
-                this.storeSettings(nerthus.options)
+                this.storeSettings(this.options)
 
 
         }catch(e){}
