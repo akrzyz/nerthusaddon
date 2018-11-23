@@ -82,7 +82,7 @@ nerthus.loadSettings = function()
         if(options)
         {
             let loaded_options = JSON.parse(options)
-            if(loaded_options.length() === this.options.length())
+            if(Object.keys(loaded_options).length === Object.keys(this.options).length)
                 this.options = loaded_options
             else
                 this.storeSettings(this.options)
@@ -95,7 +95,7 @@ nerthus.loadSettings = function()
         try{
             let cookie = getCookie('nerthusCookie');
             cookie=cookie.split('|');
-            if(cookie[1].length() === this.settings.length)
+            if(cookie[1].length === this.settings.length)
             {
                 this.settings = cookie[1];
 
