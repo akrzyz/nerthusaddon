@@ -72,26 +72,41 @@ nerthus.isSpec = function(nick)
     return this.NerthusSpec.indexOf(nick) >= 0
 }
 
-nerthus.settings='111111'
+nerthus.settings='1111111'
 nerthus.options = {'night':true, 'weather':true, 'zodiac':true}
 nerthus.loadSettings = function()
 {
     if(typeof Storage)
     {
-        var options = localStorage.nerthus_options
+        let options = localStorage.nerthus_options
         if(options)
-            this.options = JSON.parse(options)
+        {
+            let loaded_options = JSON.parse(options)
+            if(loaded_options.length() === nerthus.options.length())
+                nerthus.options = loaded_options
+            else
+                this.storeSettings(nerthus.options)
+        }
         else
-            localStorage.nerthus_options = JSON.stringify(this.options)
+            this.storeSettings(nerthus.options)
     }
     else
     {
         try{
-            var cookie = getCookie('nerthusCookie');
+            let cookie = getCookie('nerthusCookie');
             cookie=cookie.split('|');
-            this.settings=cookie[1];
-            this.options.night   = Boolean(parseInt(this.settings[0]))
-            this.options.weather = Boolean(parseInt(this.settings[3]))
+            if(cookie[1].length() === 7)
+            {
+                this.settings = cookie[1];
+
+                this.options.night = Boolean(parseInt(this.settings[0]))
+                this.options.weather = Boolean(parseInt(this.settings[3]))
+                this.options.zodiac = Boolean(parseInt(this.settings[5]))
+            }
+            else
+                this.storeSettings(nerthus.options)
+
+
         }catch(e){}
     }
 }
@@ -106,8 +121,10 @@ nerthus.storeSettings = function(options)
     }
     else
     {
-        this.settings = (options['night'] ? '1' : '0') + '11' + (options['weather'] ? '1' : '0') + '111'
-        data = new Date();
+        this.settings = (options['night'] ? '1' : '0') + '11' +
+                        (options['weather'] ? '1' : '0') + '111' +
+                        (options['zodiac'] ? '1' : '0')
+        let data = new Date();
         data.setTime(data.getTime()+30758400000);
         setCookie('nerthusCookie', data + '|' + this.settings, data);
     }
