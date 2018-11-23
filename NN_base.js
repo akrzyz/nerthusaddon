@@ -95,7 +95,7 @@ nerthus.loadSettings = function()
         try{
             let cookie = getCookie('nerthusCookie');
             cookie=cookie.split('|');
-            if(cookie[1].length() === 7)
+            if(cookie[1].length() === this.settings.length)
             {
                 this.settings = cookie[1];
 
