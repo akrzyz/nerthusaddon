@@ -3,8 +3,7 @@ suite("Zodiak")
 before(function()
 {
     nerthus = {}
-    nerthus.defer = function(){}
-    nerthus.options = {}
+    nerthus.zodiac = {}
 
     expect = require("expect.js")
     require("../NN_zodiak.js")
