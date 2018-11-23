@@ -9,11 +9,11 @@ before(function()
 
     VERSION_CURRENT = "CURRENT_VERSION"
     VERSION_OLD = "OLD_VERSION"
-    VERSION_MASTER = "master"
+    VERSION_MASTER = ""
     PREFIX_CDN = 'http://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
     VERSION_SEPARATOR_CDN = "@"
-    PREFIX_MASTER = 'http://raw.githubusercontent.com/akrzyz/nerthusaddon'
-    VERSION_SEPARATOR_MASTER = "/"
+    PREFIX_MASTER = 'http://akrzyz.github.io/nerthusaddon'
+    VERSION_SEPARATOR_MASTER = ""
     ADDITIONAL_SCRIPTS = ["ADDITIONAL_SCRIPT_1.js", "ADDITIONAL_SCRIPT_2.js"]
 
 })

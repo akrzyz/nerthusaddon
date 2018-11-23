@@ -9,12 +9,11 @@ try{
 nerthus = {}
 nerthus.addon = {}
 nerthus.addon.consts = {}
-nerthus.addon.consts.MASTER = "master"
-nerthus.addon.consts.RAW_PREFIX = 'http://raw.githubusercontent.com/akrzyz/nerthusaddon'
-nerthus.addon.consts.RAW_VERSION_SEPARATOR = '/'
+nerthus.addon.consts.MASTER_VERSION = ""
+nerthus.addon.consts.MASTER_PREFIX = 'http://akrzyz.github.io/nerthusaddon'
+nerthus.addon.consts.MASTER_VERSION_SEPARATOR = ''
 nerthus.addon.consts.CDN_PREFIX = 'http://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
 nerthus.addon.consts.CDN_VERSION_SEPARATOR = '@'
-nerthus.addon.consts.VERSION_URL = [nerthus.addon.consts.RAW_PREFIX, "master/version.json"].join('/')
 nerthus.addon.version = nerthus.addon.consts.MASTER
 nerthus.addon.version_separator = nerthus.addon.consts.CDN_VERSION_SEPARATOR
 nerthus.addon.filesPrefix = nerthus.addon.consts.CDN_PREFIX
@@ -22,6 +21,11 @@ nerthus.addon.fileUrl = function(filename)
 {
     return [[this.filesPrefix, this.version].join(this.version_separator), filename].join('/')
 }
+nerthus.addon.fileMasterUrl = function(filename)
+{
+    return [[this.consts.MASTER_PREFIX, this.consts.MASTER_VERSION].join(this.consts.MASTER_VERSION_SEPARATOR), filename].join('/')
+}
+nerthus.addon.consts.VERSION_URL = nerthus.addon.fileMasterUrl("version.json")
 nerthus.addon.store = function()
 {
     if(NerthusAddonUtils.storage())
@@ -51,9 +55,9 @@ NerthusAddonUtils = (function()
     {
         if(this.storage() && this.storage().NerthusAddonDebug)
         {
-            nerthus.addon.filesPrefix = nerthus.addon.consts.RAW_PREFIX
-            nerthus.addon.version_separator = nerthus.addon.consts.RAW_VERSION_SEPARATOR
-            nerthus.addon.version = nerthus.addon.consts.MASTER
+            nerthus.addon.version = nerthus.addon.consts.MASTER_VERSION
+            nerthus.addon.filesPrefix = nerthus.addon.consts.MASTER_PREFIX
+            nerthus.addon.version_separator = nerthus.addon.consts.MASTER_VERSION_SEPARATOR
             this.loadFromGitHub()
         }
         else if(this.storage() && this.storage().nerthus)
@@ -97,8 +101,7 @@ NerthusAddonUtils = (function()
 
     utils.loadVersion = function(onLoaded)
     {
-        const VERSION_URL = nerthus.addon.consts.VERSION_URL
-        $.getJSON(VERSION_URL, function(data)
+        $.getJSON(nerthus.addon.consts.VERSION_URL, function(data)
         {
             nerthus.addon.version = data.version
             call(onLoaded)
