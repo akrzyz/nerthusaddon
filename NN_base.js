@@ -82,8 +82,8 @@ nerthus.loadSettings = function()
         if(options)
         {
             let loaded_options = JSON.parse(options)
-            if(loaded_options.length() === nerthus.options.length())
-                nerthus.options = loaded_options
+            if(loaded_options.length() === this.options.length())
+                this.options = loaded_options
             else
                 this.storeSettings(this.options)
         }

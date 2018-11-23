@@ -81,7 +81,7 @@ test("defer a non function arg throw error", function()
     expect(nerthus.defer).withArgs("invalid arg").to.throwException()
 })
 
-test("has sepcial privilege" , function()
+test("has special privilege" , function()
 {
     var RADNY = "radny"
     var SPEC = "specialny"
@@ -168,7 +168,7 @@ test("setEnterMsg : msg present", function()
     expect(_message).to.be.equal(nerthus.EnterMsg)
 })
 
-test("stor and load settions", function()
+test("store and load settings", function()
 {
     var opt = {op1:true, op2:false, op3:"Hmm"}
     nerthus.storeSettings(opt)
