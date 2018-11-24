@@ -49,25 +49,25 @@ test("zodiac", function()
     // Wodnik (20 stycznia – 18 lutego)
     expectSignToBeBetween(SIGNS.AQUARIUS,{day:20,month:1},{day:18,month:2})
 
-    // Ryby <21.3-22.6)
+    // Ryby (19 lutego – 20 marca)
     expectSignToBeBetween(SIGNS.PISCES,{day:19,month:2},{day:20,month:3})
 
-    // Baran <21.3-22.6)
+    // Baran (21 marca – 19 kwietnia)
     expectSignToBeBetween(SIGNS.ARIES,{day:21,month:3},{day:19,month:4})
 
-    // Byk <21.3-22.6)
+    // Byk (20 kwietnia – 22 maja)
     expectSignToBeBetween(SIGNS.TAURUS,{day:20,month:4},{day:22,month:5})
 
-    // Bliźnięta <21.3-22.6)
+    // Bliźnięta (23 maja – 21 czerwca)
     expectSignToBeBetween(SIGNS.GEMINI,{day:23,month:5},{day:21,month:6})
 
-    // Rak (21 czerwca – 22 lipca)
+    // Rak (22 czerwca – 22 lipca)
     expectSignToBeBetween(SIGNS.CANCER,{day:22,month:6},{day:22,month:7})
 
-    // Lew (23 lipca – 22 sierpnia)
+    // Lew (23 lipca – 23 sierpnia)
     expectSignToBeBetween(SIGNS.LEO,{day:23,month:7},{day:23,month:8})
 
-    // Panna (23 sierpnia – 22 września)
+    // Panna (24 sierpnia – 22 września)
     expectSignToBeBetween(SIGNS.VIRGO,{day:24,month:8},{day:22,month:9})
 
     // Waga (23 września – 22 października)
