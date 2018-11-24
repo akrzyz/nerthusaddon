@@ -72,44 +72,29 @@ nerthus.isSpec = function(nick)
     return this.NerthusSpec.indexOf(nick) >= 0
 }
 
-nerthus.settings='111111'
-nerthus.options = {'night':true, 'weather':true}
+nerthus.options = {'night':true, 'weather':true, 'zodiac':true}
 nerthus.loadSettings = function()
 {
-    if(typeof Storage)
+    if(typeof localStorage !== 'undefined')
     {
-        var options = localStorage.nerthus_options
-        if(options)
-            this.options = JSON.parse(options)
-        else
-            localStorage.nerthus_options = JSON.stringify(this.options)
-    }
-    else
-    {
-        try{
-            var cookie = getCookie('nerthusCookie');
-            cookie=cookie.split('|');
-            this.settings=cookie[1];
-            this.options.night   = Boolean(parseInt(this.settings[0]))
-            this.options.weather = Boolean(parseInt(this.settings[3]))
-        }catch(e){}
+        if(localStorage.nerthus_options)
+        {
+            var options = JSON.parse(localStorage.nerthus_options)
+            for(opt in options)
+                if(this.options.hasOwnProperty(opt))
+                    this.options[opt] = options[opt]
+        }
+        localStorage.nerthus_options = JSON.stringify(this.options)
     }
 }
 
 nerthus.storeSettings = function(options)
 {
     this.options = options
-    if(typeof Storage)
+    if(typeof localStorage !== 'undefined')
     {
         localStorage.nerthus_options = JSON.stringify(this.options)
         this.addon.store()
-    }
-    else
-    {
-        this.settings = (options['night'] ? '1' : '0') + '11' + (options['weather'] ? '1' : '0') + '111'
-        data = new Date();
-        data.setTime(data.getTime()+30758400000);
-        setCookie('nerthusCookie', data + '|' + this.settings, data);
     }
 }
 

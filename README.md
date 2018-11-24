@@ -3,7 +3,7 @@
   Addon for nerthus server in game [margonem](http://www.margonem.pl/)
 
 ### How to update addon to newest version?
-  * put in console `remove localStorage.nerthus` and refresh game 
+  * put in console `delete localStorage.nerthus` and refresh game 
 
 ### How to test changes in game?
   * In order to run addon in version from master branch set in console variable `localStorage.NerthusAddonDebug = true` 
@@ -13,6 +13,7 @@
   * runing tests require nodejs and some node modules
   * run `make test_deps` to install dependencies
   * to run tests type `make test` in project root directory
+  * tests are written in QUnit framework
  
 ### How to introduce changes to game
   * Put desired revision hash to file [version.json](version.json)
