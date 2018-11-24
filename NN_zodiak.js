@@ -18,7 +18,7 @@ nerthus.zodiac.SIGNS = {
     CAPRICORN   : 11
 }
 nerthus.zodiac.sign = nerthus.zodiac.SIGNS.CAPRICORN
-nerthus.zodiac.calculate = function()
+nerthus.zodiac.calculate = function(date = new Date())
 {
     let makeStartDate = function(day,month)
     {
@@ -27,7 +27,6 @@ nerthus.zodiac.calculate = function()
         date.setUTCHours(0, 0, 0)
         return date
     }
-    const date = new Date()
     const SIGNS =
     [
         {date : makeStartDate(22, 12), sign: this.SIGNS.CAPRICORN},  // Koziorożec (22 grudnia – 19 stycznia)

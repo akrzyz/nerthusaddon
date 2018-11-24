@@ -32,18 +32,18 @@ test("zodiac", function()
 
     let setDate = function(day, month)
     {
-            let date = new _date(0)
-            date.setUTCDate(day)
-            date.setUTCMonth(month-1)
-            return date
+        let date = new _date(0)
+        date.setUTCDate(day)
+        date.setUTCMonth(month-1)
+        return date
     }
 
     let expectSignToBeBetween = function(sign, begin, end)
     {
-        setDate(begin.day, begin.month)
-        expect(nerthus.zodiac.calculate()).to.be(sign)
-        setDate(end.day, end.month)
-        expect(nerthus.zodiac.calculate()).to.be(sign)
+        let date = setDate(begin.day, begin.month)
+        expect(nerthus.zodiac.calculate(date)).to.be(sign)
+        date = setDate(end.day, end.month)
+        expect(nerthus.zodiac.calculate(date)).to.be(sign)
     }
 
     // Wodnik (20 stycznia – 18 lutego)
