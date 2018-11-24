@@ -18,8 +18,10 @@ nerthus.zodiac.SIGNS = {
     CAPRICORN   : 11
 }
 nerthus.zodiac.sign = nerthus.zodiac.SIGNS.CAPRICORN
-nerthus.zodiac.calculate = function(date = new Date())
+nerthus.zodiac.calculate = function(date)
 {
+    if (date === undefined)
+        date = new Date();
     let makeStartDate = function(day,month)
     {
         let date = new Date()

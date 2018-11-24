@@ -5,8 +5,8 @@ before(function()
     nerthus = {}
     nerthus.addon = {}
     nerthus.addon.fileUrl = function () {}
-    expect = require("expect.js")
 
+    expect = require("expect.js")
     require("../NN_zodiak.js")
 
 })
@@ -28,8 +28,8 @@ test("zodiac", function()
         SAGITTARIUS : 10,
         CAPRICORN   : 11
     }
-    let _date = Date
 
+    let _date = Date
     let setDate = function(day, month)
     {
         let date = new _date(0)
