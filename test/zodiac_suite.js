@@ -3,12 +3,12 @@ suite("Zodiak")
 before(function()
 {
     nerthus = {}
-    nerthus.zodiac = {}
-
+    nerthus.addon = {}
+    nerthus.addon.fileUrl = function () {}
     expect = require("expect.js")
+
     require("../NN_zodiak.js")
 
-    nerthus.zodiac.icon = "#";
 })
 
 
@@ -46,7 +46,7 @@ test("zodiac", function()
         expect(nerthus.zodiac.calculate()).to.be(sign)
     }
 
-    // Wodnik <21.3-22.6)
+    // Wodnik (20 stycznia – 18 lutego)
     expectSignToBeBetween(SIGNS.AQUARIUS,{day:20,month:1},{day:18,month:2})
 
     // Ryby <21.3-22.6)
