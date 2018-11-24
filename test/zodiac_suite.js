@@ -12,7 +12,7 @@ before(function()
 })
 
 
-test("zodiac", function()
+test("Correct zodiac sign around the year", function()
 {
     const SIGNS = {
         AQUARIUS    : 0,
@@ -82,5 +82,7 @@ test("zodiac", function()
     // Koziorożec (22 grudnia – 19 stycznia)
     expectSignToBeBetween(SIGNS.CAPRICORN,{day:22,month:12},{day:19,month:1})
 
+    // Koniec/początek roku (31 grudnia – 1 stycznia)
+    expectSignToBeBetween(SIGNS.CAPRICORN,{day:31,month:12},{day:1,month:1})
 })
 
