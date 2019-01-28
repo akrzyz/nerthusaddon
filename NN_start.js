@@ -14,16 +14,16 @@ nerthus.addon.consts.MASTER_PREFIX = 'http://akrzyz.github.io/nerthusaddon'
 nerthus.addon.consts.MASTER_VERSION_SEPARATOR = ''
 nerthus.addon.consts.CDN_PREFIX = 'http://cdn.jsdelivr.net/gh/akrzyz/nerthusaddon'
 nerthus.addon.consts.CDN_VERSION_SEPARATOR = '@'
-nerthus.addon.version = nerthus.addon.consts.MASTER
+nerthus.addon.version = nerthus.addon.consts.MASTER_VERSION
 nerthus.addon.version_separator = nerthus.addon.consts.CDN_VERSION_SEPARATOR
 nerthus.addon.filesPrefix = nerthus.addon.consts.CDN_PREFIX
 nerthus.addon.fileUrl = function(filename)
 {
-    return [[this.filesPrefix, this.version].join(this.version_separator), filename].join('/')
+    return encodeURI([[this.filesPrefix, this.version].join(this.version_separator), filename].join('/'))
 }
 nerthus.addon.fileMasterUrl = function(filename)
 {
-    return [[this.consts.MASTER_PREFIX, this.consts.MASTER_VERSION].join(this.consts.MASTER_VERSION_SEPARATOR), filename].join('/')
+    return encodeURI([[this.consts.MASTER_PREFIX, this.consts.MASTER_VERSION].join(this.consts.MASTER_VERSION_SEPARATOR), filename].join('/'))
 }
 nerthus.addon.consts.VERSION_URL = nerthus.addon.fileMasterUrl("version.json")
 nerthus.addon.store = function()
@@ -81,22 +81,28 @@ NerthusAddonUtils = (function()
     utils.loadFromGitHub = function(onLoaded)
     {
         log("Load nerthus addon from github, version = " + nerthus.addon.version)
-        this.loadScripts(['NN_dlaRadnych.js'], function(){
-            this.loadScripts(['NN_base.js'], function(){
-                this.loadScripts(nerthus.scripts, onLoaded)
-        }.bind(this))}.bind(this))
+        this.loadScripts(['NN_dlaRadnych.js', 'NN_base.js'], function(){
+                this.loadScripts(nerthus.scripts, this.startPlugins.bind(this,onLoaded))
+        }.bind(this))
     }
 
     utils.loadFromStorage = function(onLoaded)
     {
         nerthus = this.parser.parse(this.storage().nerthus)
         log("Load nerthus addon from local storage, version = " + nerthus.addon.version)
+        this.startPlugins(onLoaded)
+    }
 
+    utils.startPlugins = function(callback)
+    {
+        const postfix = getCookie("interface") === "ni" ? "_ni" : ""
+        const start_method = "start" + postfix
+
+        log("starting method: " + start_method)
         for(var i in nerthus)
-            if(nerthus[i] && nerthus[i].start)
-                call(nerthus[i].start.bind(nerthus[i]))
-
-        call(onLoaded)
+            if(nerthus[i] && nerthus[i][start_method])
+                call(nerthus[i][start_method].bind(nerthus[i]))
+        call(callback)
     }
 
     utils.loadVersion = function(onLoaded)

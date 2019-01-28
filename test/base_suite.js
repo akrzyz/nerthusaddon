@@ -333,9 +333,9 @@ test("other : nick only", function()
 
 test("other : nick + clan", function()
 {
-    var other = {nick:"NICK", clan : "CLAN"}
+    var other = {nick:"NICK", clan : {name: "CLAN"}}
     expect(nerthus.tips.other(other)).equal("<b>" + other.nick + "</b>" +
-                                            "[" + other.clan +"]<br>")
+                                            "[" + other.clan.name +"]<br>")
 })
 
 test("other : nick + mute", function()
@@ -374,9 +374,9 @@ test("other : nick + clan + title + rank + mute", function()
     nerthus.tips.title = function(){return "VIP"}
     nerthus.tips.rank = function(){return "RANK"}
 
-    var other = {nick:"NICK", clan:"CLAN", attr:1}
+    var other = {nick:"NICK", clan : {name: "CLAN"}, attr:1}
     expect(nerthus.tips.other(other)).equal("<b>" + other.nick + "</b>" +
-                                            "[" + other.clan + "]<br>" +
+                                            "[" + other.clan.name + "]<br>" +
                                             "VIP" +
                                             "<i>RANK</i>" +
                                             "<img src=img/mute.gif>")
@@ -389,6 +389,14 @@ test("hero : nick", function()
     var hero = {nick:"NICK"}
     expect(nerthus.tips.hero(hero)).equal(
          "<b><font color='white'>" + hero.nick + "</font></b>")
+})
+
+test("hero : nick + clan", function()
+{
+    var hero = {nick:"NICK", clan:{name:"KLAN", id:42}}
+    expect(nerthus.tips.hero(hero)).equal(
+         "<b><font color='white'>" + hero.nick + "</font></b>"+
+         "<center>[" + hero.clan.name + "]</center>")
 })
 
 test("hero : nick + title", function()
@@ -418,16 +426,17 @@ test("hero : nick + rank", function()
 })
 
 
-test("hero : nick + title + rank", function()
+test("hero : nick + clan + title + rank", function()
 {
     var _rank = nerthus.tips.rank
     var _title = nerthus.tips.title
     nerthus.tips.title = function(){return "VIP"}
     nerthus.tips.rank = function(){return "RANK"}
 
-    var hero = {nick:"NICK"}
+    var hero = {nick:"NICK", clan:{name:"KLAN", id:42}}
     expect(nerthus.tips.hero(hero)).equal(
          "<b><font color='white'>" + hero.nick + "</font></b>" +
+         "<center>[" + hero.clan.name + "]</center>" +
          "<center>" + "VIP" + "</center>" +
          "<i><font color='red'>" + "RANK" + "</font></i>")
 

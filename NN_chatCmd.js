@@ -12,10 +12,17 @@ nerthus.chatCmd.run = function(ch)
         var callback = this.fetch_callback(cmd,ch)
         if(callback)
         {
-            log("["+ch.k+"] " + ch.n + " -> " + ch.t) //gdze kto co
+            ch.t = this.fixUrl(ch.t)
+            log("["+ch.k+"] " + ch.n + " -> " + ch.t) //gdzie kto co
             return callback(ch)
         }
     }
+}
+
+nerthus.chatCmd.fixUrl = function(text)
+{
+    let url = RegExp(/(https?)\*Krzywi się\.\*(\S+)/)
+    return text.replace(url, "$1:/$2")
 }
 
 nerthus.chatCmd.fetch_cmd = function(ch)
@@ -98,7 +105,6 @@ nerthus.chatCmd.map["sys"] = function(ch)
 nerthus.chatCmd.map["map"] = function(ch)
 {
     var map_url = ch.t.split(" ").slice(1).join(" ");
-    map_url = nerthus.chatCmd.extractUrlFromDecorator(map_url);
     $("#ground").css("backgroundImage","url(" + map_url + ")")
     return true;
 }
@@ -115,7 +121,7 @@ nerthus.chatCmd.map["addGraf"] = function(ch)
     var cmd = ch.t.split(" ").slice(1).join(" ").split(",");
     var x = parseInt(cmd[0]);
     var y = parseInt(cmd[1]);
-    var _url = nerthus.chatCmd.extractUrlFromDecorator(cmd[2]);
+    var _url = cmd[2];
     var _tip = cmd[3] ? ' tip="<b>'+cmd[3]+'</b>" ctip="t_npc"' : "";
     var isCol = parseInt(cmd[4]);
     $('<img id="_ng-' + cmd[0] + '-' + cmd[1] + '" src="'+ _url +'"'+_tip+'>').css("position","absolute").appendTo('#base')
@@ -128,17 +134,6 @@ nerthus.chatCmd.map["addGraf"] = function(ch)
     if(isCol) g.npccol[ x + 256 * y] = true;
     return true;
 }
-
-nerthus.chatCmd.extractUrlFromDecorator = function(text)
-{
-    if(text[0]=='<') //is text wrapped by html tag
-    {
-        var url = RegExp(/goToUrl\(\"(\S+)\"\)/).exec(text);
-        if(url) return "http://" + url[1];
-    }
-    return text;
-}
-
 
 nerthus.chatCmd.map["delGraf"] = function(ch)
 {
@@ -182,8 +177,6 @@ nerthus.chatCmd.start = function()
     $("<style type='text/css'> #chattxt .dial666{ color:#FF66FF ; } </style>").appendTo("head");
     g.chat.parsers.push(nerthus.chatCmd.run.bind(this));
 }
-
-nerthus.chatCmd.start()
 
 }catch(e){log('nerthus chatCmd: '+e.message,1);}
 

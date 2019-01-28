@@ -141,7 +141,7 @@ nerthus.tips.title = function(player)
 nerthus.tips.other = function(other)
 {
     var tip = "<b>" + other.nick + "</b>"
-    tip += other.clan ? "[" + other.clan + "]<br>" : ""
+    tip += other.clan ? "[" + other.clan.name + "]<br>" : ""
     tip += this.title(other)
     var rank = this.rank(other)
     tip += rank ? "<i>" + rank + "</i>" : ""
@@ -154,6 +154,7 @@ nerthus.tips.hero = function(hero)
     var title = this.title(hero)
     var rank =  this.rank(hero)
     var tip = "<b><font color='white'>" + hero.nick + "</font></b>"
+    tip += hero.clan ? "<center>[" + hero.clan.name + "]</center>" : ""
     tip += title ? "<center>" + title + "</center>" : ""
     tip += rank ? "<i><font color='red'>" + rank + "</font></i>" : ""
     return tip
@@ -227,8 +228,6 @@ nerthus.base.start = function()
     nerthus.setEnterMsg()
 }
 
-nerthus.loadSettings();
-nerthus.base.start()
-nerthus.tips.start()
+nerthus.loadSettings()
 
 }catch(e){log('NerthusBase Error: '+e.message)}
