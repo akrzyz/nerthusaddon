@@ -61,15 +61,19 @@ nerthus.lvlNames = [
     'Zguba Czarnej Gwardii',
     'Poskramiacz Furboli',
     'Egzekutor Myświórów',
-    'Czarnołapka',
-    'Nigruszka',
-    'Leśna Dama',
+    'Wielki Inkwizytor',
+    'Zaklinacz Arachnidów',
+    'Kat Demonisa',
     'Oprawca Maddoków',
     'Potomek Najwyższych',
+    'Władca Puszczy',
+    'Konkwistador',
+    'Ewokator Duchów',
+    'Odkrywca Reliktów',
+    'Smocza Krew',
     'Piekielny Jeźdźca',
     'Ponury Żniwiarz',
-    'Gwardzista Piekieł',
-    'Tytan'
+    'Gwardzista Piekieł'
 ]
 
 //vips {player_id : title}
