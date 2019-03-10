@@ -12,6 +12,7 @@ before(function()
 
     expect = require("expect.js")
     require("../NN_alko.js")
+
 })
 
 test("dummy", function()

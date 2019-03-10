@@ -19,7 +19,7 @@ before(function()
     expect = require("expect.js")
     require("../NN_maps.js")
 
-    let jsdom = require("jsdom");
+    var jsdom = require("jsdom");
     const { JSDOM } = jsdom;
     const { window } = new JSDOM();
     const { document } = (new JSDOM('')).window;

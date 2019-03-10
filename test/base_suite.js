@@ -26,7 +26,8 @@ before(function()
     jqObjMock.attr = function(){}
     $ = function (){return jqObjMock}
 
-
+    expect = require("expect.js")
+    require("../NN_base.js")
 
     g.names = {}
     g.names.ranks =
@@ -41,9 +42,6 @@ before(function()
         7 : "RADNY"
     }
     rights = {ADMIN : 1, SMG : 16, MG : 2, MC : 4}
-
-    expect = require("expect.js")
-    require("../NN_base.js")
 
 })
 
