@@ -39,6 +39,9 @@ nerthus.NerthusNarr = [
     'Lottie',
     'Soll Węglobrody',
     'Shalley',
+    'Marcus Sermon',
+    'Shalley',
+    'Soll Węglobrody',
     'Marcus Sermon'
 ]
 
