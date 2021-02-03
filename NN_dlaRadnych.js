@@ -42,6 +42,10 @@ nerthus.NerthusNarr = [
     'Marcus Sermon',
     'Shalley',
     'Soll Węglobrody',
+    'Kovir',
+    'Lorrie',
+    'Mia Riddle',
+    'Feanor Iluvelen',
     'Marcus Sermon'
 ]
 
