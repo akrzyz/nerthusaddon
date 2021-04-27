@@ -24,7 +24,8 @@ nerthus.NerthusSpec = [
 
 //lista radnych - możliwość używania komend chatowych i ranga "radny"
 nerthus.NerthusRad = [
-    "Umbrael Regis",
+    "Karendar",
+    "Shalley",
     "Astratas"
 ]
 
@@ -233,7 +234,7 @@ nerthus.ranks.start = function()
     g.names.ranks[1] = "Uber Miszcz Gry"
     g.names.ranks[2] = "Miszcz Gry"
     g.names.ranks[3] = "Strażnik Słowa" //"Modelator Czasu";            //"Moderator czatu";
-    g.names.ranks[4] = "Tkacz Słów"     //"Modelator czasoprzestrzeni"; //"Super moderator";
+    g.names.ranks[4] = "Namiestnik"     //"Modelator czasoprzestrzeni"; //"Super moderator";
     g.names.ranks[5] = "Trubadur"       //"Męczystruna";                //"Bard";
     g.names.ranks[6] = "Piewca Słowa"   //"Modelator struny";           //"Bard + MC";
     g.names.ranks[7] = "Radny"                                          //"Radny";
@@ -245,7 +246,7 @@ nerthus.ranks.start_ni = function ()
     this.rankName[1] = "Uber Miszcz Gry"
     this.rankName[2] = "Miszcz Gry"
     this.rankName[3] = "Strażnik Słowa" //"Modelator Czasu";            //"Moderator czatu";
-    this.rankName[4] = "Tkacz Słów"     //"Modelator czasoprzestrzeni"; //"Super moderator";
+    this.rankName[4] = "Namiestnik"     //"Modelator czasoprzestrzeni"; //"Super moderator";
     this.rankName[5] = "Trubadur"       //"Męczystruna";                //"Bard";
     this.rankName[6] = "Piewca Słowa"   //"Modelator struny";           //"Bard + MC";
     this.rankName[7] = "Radny"                                          //"Radny";
